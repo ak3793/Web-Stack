@@ -84,7 +84,7 @@ def getData():
 
 	client = pyorient.OrientDB("localhost", 2424)
 	session_id = client.connect("root", "password")
-	db_name = "weibo"
+	db_name = "weibo_OLD"
 	db_username = "admin"
 	db_password = "admin"
 
@@ -95,7 +95,7 @@ def getData():
 		print "database [" + db_name + "] does not exist! session ending..."
 		sys.exit()
 
-        query = 'SELECT * FROM Checkin WHERE lat BETWEEN {} AND {} AND lng BETWEEN {} AND {} AND time BETWEEN "2014-01-21 00:01:00" and "2014-01-21 23:59:00"
+        query = 'SELECT * FROM Checkin WHERE time BETWEEN "2014-01-21 00:01:00" and "2014-01-21 23:59:00" LIMIT 10'
 
 	records = client.command(query.format(lat1, lat2, lng1, lng2))
 
