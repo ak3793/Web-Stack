@@ -83,8 +83,8 @@ def getData():
 	print "received coordinates: [" + lat1 + ", " + lat2 + "], [" + lng1 + ", " + lng2 + "]"
 
 	client = pyorient.OrientDB("localhost", 2424)
-	session_id = client.connect("root", "password")
-	db_name = "weibo_OLD"
+	session_id = client.connect("root", "admin")
+	db_name = "weibo"
 	db_username = "admin"
 	db_password = "admin"
 
@@ -137,7 +137,7 @@ def getData2():
 	print "received coordinates: [" + lat1 + ", " + lat2 + "], [" + lng1 + ", " + lng2 + "]"
 
 	client = pyorient.OrientDB("localhost", 2424)
-	session_id2 = client.connect("root", "password")
+	session_id2 = client.connect("root", "admin")
 	db_name2 = "soufun"
 	db_username2 = "admin"
 	db_password2 = "admin"
